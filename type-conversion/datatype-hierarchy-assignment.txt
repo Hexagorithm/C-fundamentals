@@ -1,0 +1,6 @@
+The data type hierarchy does not work, when we are assigning a value of one datatype, to a variable of another datatype.
+Then C will always try to convert the datatype on the right to the datatype on the left.
+
+Examples:
+int value = 5.5i   --> value = 5
+char value = 60    --> value = "<"

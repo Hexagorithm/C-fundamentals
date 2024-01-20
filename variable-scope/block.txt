@@ -1,0 +1,26 @@
+In C, the other variable scope appart for global is the block scope.
+
+We utilize the block scope when we declare a variable inside a function.
+
+What is a block? A block is everything in between 2 { } brackets.
+"between" should be read here litteraly here.
+
+For example: a function that is declared outside
+another function(because you cant declare functions in functions) 
+will be deemed outside the block.
+
+What does that mean? If in a function we use another function,
+that function will not have access to variables specifed in the block
+of the outer function, unless they are "force fed" into the function via
+parameters.
+
+
+int main() {
+	int integer = 69;
+	printInteger();     <--- does not see the 'integer' variable
+	return 0;
+}
+
+printInteger() {            <--- declared outside the main() function
+	...
+}

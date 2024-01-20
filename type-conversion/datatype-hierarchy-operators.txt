@@ -1,0 +1,17 @@
+This is the hieararchy of data types.
+When one data type is operated on with another, this list dictates
+which variable will change its data type.
+Lover datatypes will convert for the sake of higher datatypes.
+
+long double
+double
+float
+long
+int
+short
+char
+
+
+examples:
+int + char --> int + int
+int + double --> double + double

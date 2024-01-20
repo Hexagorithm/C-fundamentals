@@ -1,0 +1,28 @@
+One of the variable scopes is the global scope.
+
+The global scope is utilized when we declare a 
+variable outside the main() function, in other words
+it is everything that is declared with no identation.
+
+Globaly declared variables are able to be invoked in every
+block in the program.
+
+int variable = 52
+
+int main() {             <--- main() sees the 'variable'
+	...
+}
+
+It is also good to acknowledge, that functions themselves
+are variables. That is why we can invoke something like
+"printHello" in the main function, because "printHello"
+was declared in the global scope!
+
+int main() {             <--- sees the 'printHello()' function
+	printHello();
+	return 0;
+}
+
+void printHello() {      <--- declared in the global scope
+	printf("Hello!")
+}

@@ -1,0 +1,5 @@
+what is the h in stdio.h?
+what is the h in math.h?
+what is the h in ctype.h?
+
+Libraries are called headders.
