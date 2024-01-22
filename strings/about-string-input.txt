@@ -1,0 +1,26 @@
+There's an intersting detail about C working with the memory of the computer, visible
+ when we want to input a string into the scanf() function.
+
+Having a string array as an variable:
+	char string[10];
+The syntax we used all this time would lead us to believe that in order to get
+a string inputted to the string viariable would be this:
+	scanf("%s",&string);
+This, however, is NOT CORRECT! (gasp)
+
+"But why, why is this syntax wrong? Why did it work with integers, doubles, single elements of arrays, but not strings?"
+
+In order to answer these cunning questions, we need to talk about pointers.
+What is a pointer? A pointer is basically the cursor your computer needs in-conjunction
+ with the length of the data object to read and write the bytes in the correct place in memory.
+
+Memory can be thought of as a big array. Lets say that memory is an array like this:
+[0,0,0,0,0,0,0,0,0] (not the actual representation of memory, since memory is binary + bytes and stuff)
+Lets say, that we declare a variable called: 'integer', with the size of 1 place in memory, and no value.
+[0,x,0,0,0,0,0] 
+What we are actually doing, is assigning the name 'integer' to the memory address of where 'integer is sotred', in this case 'integer' points to the memory address index of 1 .
+If we want to change the value of 'integer' (it has no value yet), we use the scanf() function with syntax like this:
+	scanf("%d",&integer);
+This syntax creates a POINTER.
+What is a pointer? A pointer is like a cursor of a mouse, that can move between places in memory.
+This syntax basically takes in input from the user, puts a pointer right in the beginning of the place of where value is store

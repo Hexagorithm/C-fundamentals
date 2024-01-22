@@ -1,0 +1,4 @@
+The main difference between scanf() and fgets() is that scanf() saves input as a sequence terminated by a space, whereas fgets() saves input as a sequence terminated by, i dont know newline or zero byte?
+
+This is important especially with c, where scanf() can take the first name of someone, like John...
+while fgets() can take the first and last name of someone, like John Kremer.
