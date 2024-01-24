@@ -1,0 +1,22 @@
+A pointer is basically a variable that holds the memory address of another value, where it is stored.
+When we use scanf() to assign a new value to a variable using the syntax:
+	scanf("%d",&integer);
+We use a pointer to the variable instead of the symbolic variable name.
+Why is that? This way of changing a variable is connected to the overall structure of the memory of the computer.
+The computer basically reads the instruction of scanf() with pointer as:
+	"1.Read a string from standard input and format it(scanf)."
+	"2.Go to the memory address the pointer points to."
+	"3.Overwrite the data in that memory address to be the same as standard input."
+Knowledge of the datatype of the data the computer is to change is paramount, as it will indicate how much bytes shall be taken into account for the overwritting. Scanf knows this from the format string we give it as the first argument.
+
+
+"Well hold on, when we want to use scanf to assign a string to an array, we use the syntax:
+	scanf("%s",string);
+No pointer needed, but why?
+And also, when we want to use a pointer like normal:
+	scanf("%s",&string);
+We get a weird warning that says it wants a pointer, but multiple pointers are given?"
+
+This syntax is correct, because in C, the string symbolic variable name is basically the pointer to the first value of the string in disguise.
+
+That is why the warning of &string is confusing. The scanf() function waits for a pointer that points to a value, and this pointer has its own type. When we input string, everything is jolly. However when we use &string, we make a pointer to a pointer to the first value. This generally should be correct, as at the end of the day, the address of the first elelment of the array can be extracted from both syntaxes, but scanf is looking for a specific type, and a different type triggers this error.
